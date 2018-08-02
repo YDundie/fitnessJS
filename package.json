@@ -1,0 +1,14 @@
+{
+  "name": "cardiowebsite",
+  "version": "1.0.0",
+  "description": "Responsive calories website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Marko Mustac",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
