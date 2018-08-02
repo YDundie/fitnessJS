@@ -1,0 +1,177 @@
+@import "config";
+@import "menu";
+@import "mobile";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $primary-color;
+  @include background();
+  color: setTextColor($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+//Headings
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  &.lg-heading {
+    font-size: 6rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: setTextColorSecondary($primary-color);
+}
+
+main {
+  padding: 0rem;
+  height: 100%;
+
+  .icons {
+    position: absolute;
+    bottom: 5px;
+    margin-top: 0rem;
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: setTextColorSecondary($primary-color);
+        @include easeOut();
+      }
+    }
+  }
+  #home-btn {
+    transform: scale(1, 1);
+    @include easeOut;
+  }
+  #home-btn:hover {
+    cursor: pointer;
+
+    transform: translate(10px);
+    @include easeOut;
+  }
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 5vh;
+    }
+  }
+}
+
+.slidecontainer {
+  position: relative;
+  margin-left: 3vw;
+  width: 70%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: rgba(setTextColor($primary-color), 0.5);
+  outline: none;
+  opacity: 0.7;
+  @include easeOut;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+    background: rgba(setTextColor($primary-color), 0.7);
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: setTextColorSecondary($primary-color);
+    cursor: pointer;
+  }
+}
+
+#bmiCategories {
+  list-style: none;
+  & > li {
+    font-size: 20px;
+  }
+}
+
+.resoult {
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px #111111;
+}
+
+.activity {
+  text-align: center;
+  z-index: 1;
+  & > ul > li {
+    margin-bottom: 3rem;
+    margin-left: 4%;
+    list-style: none;
+    @include easeOut;
+  }
+  & > ul > li > span:hover {
+    cursor: pointer;
+    color: setTextColorSecondary($primary-color);
+    @include easeOut;
+  }
+
+  & > .caloriesBurnt {
+    margin-bottom: 3%;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+}
+
+.selected {
+  color: setTextColorSecondary($primary-color);
+  margin-left: 3%;
+  @include easeOut;
+}
+
+.hidenn {
+  visibility: hidden;
+  opacity: 0;
+  @include easeOut;
+}
+
+input {
+  border-radius: 25px;
+  border: none;
+  text-align: center;
+  font-weight: 800;
+  width: 60px;
+  height: 50px;
+}
+
+p {
+  font-size: 1.5rem;
+}
