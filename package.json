@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+    
   },
   "author": "Marko Mustac",
   "license": "ISC",

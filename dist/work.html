@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/workout.css">
+    <title>Fitness Calculator</title>
+</head>
+
+<body id="bg-img">
+    <header>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+
+        <nav class="menu">
+            <div class="menu-branding">
+                <div class="portrait"></div>
+            </div>
+            <ul class="menu-nav">
+                <li class="nav-item ">
+                    <a href="index.html" class="nav-link">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item current">
+                    <a href="work.html" class="nav-link">
+                        Workout Planner
+                    </a>
+                </li>
+
+                <li class="nav-item ">
+                    <a href="about.html" class="nav-link">
+                        Proces of calculating
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main id="home">
+        <h1 class="lg-heading" id="home-btn">
+            <a href="index.html">Workout
+                <span class="text-secondary">Planner</span>
+            </a>
+        </h1>
+        <div class="content-workout">
+
+            <button id="add-activity" onclick="openModal('flex')">Add Activity</button>
+            <table id="todoWork">
+                <tr>
+                    <th>
+                        <i class="fas fa-walking"></i> Cardio</th>
+                    <th>
+                        <i class="fas fa-dumbbell "></i> Strenght</th>
+                    <th>
+                        <i class="fas fa-calendar-alt"></i> Date</th>
+                    <th>
+                        <i class="fas fa-fire"></i> Calories</th>
+                </tr>
+            </table>
+            <button id="clear-list" onclick="clearList()">Clear List</button>
+        </div>
+
+
+    </main>
+
+    <div class="bg-modal">
+        <div class="modal-content">
+            <div class="close" onclick="openModal('none')">+</div>
+            <div class="activity">
+                <h2>Select
+                    <span class="text-secondary">Activity</span>
+                </h2>
+                <ul>
+                    <li>
+                        <span onclick="activity('cardio')" id="cardio">
+                            <i class="fas fa-walking fa-3x"></i> Cardio</span>
+                        <span id="hidden-cardio" class="hidenn">
+                            <span id="align">Minutes: </span>
+                            <input type="number" value="0" id="min-cardio"> </span>
+
+                    </li>
+                    <p></p>
+                    <li>
+                        <span onclick="activity('strenght')" id="strenght">
+                            <i class="fas fa-dumbbell fa-2x"></i> Strenght</span>
+                        <span id="hidden-strenght" class="hidenn">
+                            Minutes:
+                            <input type="number" value="0" id="min-strenght"> </span>
+
+                    </li>
+                    <p></p>
+                    <li>
+
+                        <input placeholder="Date" class="textbox-n" type="text" onfocus="(this.type = 'date')" id="date">
+
+                    </li>
+                </ul>
+                <button id="submit-button" onclick="addActivity('none')">submit</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/menu.js"></script>
+
+    <script src="js/modal.js"></script>
+</body>
+
+</html>

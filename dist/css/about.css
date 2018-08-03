@@ -1,0 +1,23 @@
+p {
+  margin: 1% 3%;
+  line-height: 1.5;
+}
+
+.outline {
+  border-left: 10px solid rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 50% 6% 10%;
+}
+
+#cal-H {
+  cursor: context-menu;
+}
+
+@media screen and (max-width: 768px) {
+  .outline {
+    margin: 0% 20% 7% 20%;
+  }
+  #last {
+    margin-bottom: 15%;
+  }
+}

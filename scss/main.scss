@@ -1,6 +1,5 @@
 @import "config";
 @import "menu";
-@import "mobile";
 
 * {
   box-sizing: border-box;
@@ -49,6 +48,9 @@ header {
   color: setTextColorSecondary($primary-color);
 }
 
+li {
+  list-style: none;
+}
 main {
   padding: 0rem;
   height: 100%;
@@ -70,8 +72,6 @@ main {
     @include easeOut;
   }
   #home-btn:hover {
-    cursor: pointer;
-
     transform: translate(10px);
     @include easeOut;
   }
@@ -144,6 +144,7 @@ main {
 
   & > .caloriesBurnt {
     margin-bottom: 3%;
+    padding-bottom: 50px;
   }
 
   h2 {
@@ -175,3 +176,27 @@ input {
 p {
   font-size: 1.5rem;
 }
+
+button {
+  border: none;
+  border-radius: 25px;
+  width: 20%;
+  height: 5%;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  background-color: rgba(darken($secondary-color, 3%), 0.9);
+  color: $primary-color;
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  @include easeOut;
+  &:hover {
+    color: darken($primary-color, 20%);
+    background-color: lighten($secondary-color, 10%);
+    @include easeOut;
+  }
+}
+
+@import "mobile";
