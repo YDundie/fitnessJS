@@ -317,7 +317,8 @@ button {
     margin-top: 10vh;
     font-size: 350%; }
   button {
-    height: 15%; }
+    height: 10%;
+    width: 30%; }
   #todoWork {
     width: 100%;
     margin: 0; } }
@@ -327,7 +328,7 @@ button {
     margin-top: 10vh;
     font-size: 150%; }
   .slidecontainer #bmiCategories > li {
-    font-size: 200%; }
+    font-size: 110%; }
   button {
     width: 50%;
     height: 10%; }

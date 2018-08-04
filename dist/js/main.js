@@ -5,6 +5,8 @@ let sliderW = document.getElementById("myWeight");
 let outputW = document.getElementById("weight");
 let BMI = document.getElementById("color");
 
+//displaying values when slider are cheanged
+
 sliderW.oninput = function() {
   outputW.innerHTML = this.value;
   calculateBMI();
@@ -14,6 +16,8 @@ sliderH.oninput = function() {
   outputH.innerHTML = this.value;
   calculateBMI();
 };
+
+//Calculating BMI
 
 function calculateBMI() {
   BMI.textContent =
@@ -25,12 +29,17 @@ function calculateBMI() {
     BMI.style.color = "red";
   }
 }
+
+//toggeling beetween visible for inputs
+
 function activity(activity) {
   document.getElementById(activity).classList.toggle("selected");
   document.getElementById("hidden-" + activity).classList.toggle("hidenn");
   document.getElementById("min-" + activity).value = 0;
   clcBurnt();
 }
+
+//formula for calculating avrage calories burnt
 
 function clcBurnt() {
   document.getElementById("cal").textContent =
