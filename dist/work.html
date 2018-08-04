@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/workout.css">
+    <link rel="stylesheet" href="css/main.css">
+
     <title>Fitness Calculator</title>
 </head>
 
@@ -58,26 +58,34 @@
                 <span class="text-secondary">Planner</span>
             </a>
         </h1>
-        <div class="content-workout">
-
-            <button id="add-activity" onclick="openModal('flex')">Add Activity</button>
-            <table id="todoWork">
-                <tr>
-                    <th>
-                        <i class="fas fa-walking"></i> Cardio</th>
-                    <th>
-                        <i class="fas fa-dumbbell "></i> Strenght</th>
-                    <th>
-                        <i class="fas fa-calendar-alt"></i> Date</th>
-                    <th>
-                        <i class="fas fa-fire"></i> Calories</th>
-                </tr>
-            </table>
-            <button id="clear-list" onclick="clearList()">Clear List</button>
-        </div>
-
 
     </main>
+
+    <button id="add-activity" onclick="openModal('flex')">Add Activity</button>
+    <p id="sum">
+        <i class="fas fa-fire "></i>Sum:
+        <span id="sumCal"> asddadasadadadas</span>
+    </p>
+    <table id="todoWork">
+        <tr>
+            <th>
+                <i class="fas fa-walking"></i> Cardio</th>
+            <th>
+                <i class="fas fa-dumbbell "></i> Strenght</th>
+            <th>
+                <i class="fas fa-calendar-alt"></i> Date</th>
+            <th>
+                <i class="fas fa-fire"></i> Calories</th>
+        </tr>
+    </table>
+
+
+
+    <button id="clear-list" onclick="clearList()">Clear List</button>
+    </div>
+
+
+
 
     <div class="bg-modal">
         <div class="modal-content">
@@ -114,6 +122,22 @@
                 <button id="submit-button" onclick="addActivity('none')">submit</button>
 
             </div>
+        </div>
+    </div>
+    <div class="content-workout">
+        <div class="icons">
+            <a href="#!">
+                <i class="fab fa-twitter fa-2x"></i>
+            </a>
+            <a href="#!">
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="#!">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="#!">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
         </div>
     </div>
 

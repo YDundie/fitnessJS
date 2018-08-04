@@ -3,6 +3,7 @@ let modalO = document.querySelector(".bg-modal");
 let id = localStorage.length + 1; // used to find items and to save items that will be displayed
 let counter = 1; // used to properly list items in table
 let lastID = 0; // helping variable for finding lastID when refreshing the page
+let sumCal = 0; // variable for saving sum of all calories in table
 
 if (id >= 1) {
   id = getLastID();
@@ -59,6 +60,7 @@ function activity(activity) {
 //Display items on load
 
 function displayItems() {
+  document.getElementById("sumCal").textContent = sumCal;
   for (let i = 0; i <= getLastID(); i++) {
     //string to object
 
@@ -97,7 +99,9 @@ function remove(ID) {
 function getLastID() {
   Object.keys(localStorage).forEach(function(key) {
     let test = JSON.parse(localStorage.getItem(key));
+
     if (lastID < test.id) {
+      sumCal += test.caloreis;
       lastID = test.id;
     }
   });

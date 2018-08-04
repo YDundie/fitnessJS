@@ -310,8 +310,8 @@ button {
     .menu-branding .portrait {
       background: url("../img/logo.jpg");
       background-size: cover;
-      max-width: 150px;
-      max-height: 150px; }
+      max-width: 125px;
+      max-height: 125px; }
   .activity .caloriesBurnt {
     padding-bottom: 50px; }
   .activity > ul > li {
@@ -343,4 +343,11 @@ button {
   ul {
     padding: 0; }
   .menu-nav {
-    text-align: center; } }
+    text-align: center; }
+  .modal-content {
+    width: 320px;
+    height: 400px; }
+  .activity > ul > li {
+    margin-bottom: 1rem; }
+  #date {
+    width: 40%; } }

@@ -1,7 +1,11 @@
 .content-workout {
-  width: 100vw;
-  height: 85vh;
-  position: relative;
+  height: 58vh;
+  width: 100%;
+  position: absolute;
+  top: 50;
+  left: 0;
+  z-index: -1;
+  background: rgba(68, 68, 68, 0.8);
 }
 
 h1,
@@ -12,7 +16,7 @@ button {
 .bg-modal {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+
   position: absolute;
   top: 0;
   display: none;
@@ -28,11 +32,12 @@ button {
   background-color: #555;
   border-radius: 20px;
   text-align: center;
-  position: relative;
+  position: absolute;
+  top: 25vh;
 }
 
 input {
-  width: 40%;
+  width: 30%;
 
   margin: 0 auto;
 }
@@ -82,9 +87,9 @@ input[type="date"]::-webkit-inner-spin-button {
 }
 
 table {
-  margin-top: 50px;
   width: 70%;
   margin: 50px auto;
+  margin-top: 0;
   border-left: 10px solid rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -106,4 +111,24 @@ td > a {
 
 td > a:hover {
   color: gold;
+}
+
+#sum {
+  margin: 20px 0;
+  margin-left: 68%;
+}
+
+.icons {
+  position: absolute;
+  bottom: 15%;
+  margin-top: 0rem;
+}
+
+.icons > a {
+  margin-left: 15px;
+}
+
+a:hover {
+  color: gold;
+  transition: all 0.4s;
 }
