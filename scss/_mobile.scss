@@ -1,6 +1,17 @@
 //Widescreen
 
 @include mediaXl {
+  .modal-content {
+    width: 500px;
+    height: 410px;
+  }
+  .activity > ul > li {
+    margin-bottom: 2rem;
+  }
+
+  #date {
+    width: 40%;
+  }
 }
 
 @include mediaLg {
@@ -10,6 +21,17 @@
   }
   button {
     height: 10%;
+  }
+  .modal-content {
+    width: 500px;
+    height: 410px;
+  }
+  .activity > ul > li {
+    margin-bottom: 2rem;
+  }
+
+  #date {
+    width: 40%;
   }
 }
 
@@ -48,6 +70,17 @@
       max-width: 125px;
       max-height: 125px;
     }
+  }
+  .modal-content {
+    width: 500px;
+    height: 410px;
+  }
+  .activity > ul > li {
+    margin-bottom: 2rem;
+  }
+
+  #date {
+    width: 40%;
   }
 
   .activity {
