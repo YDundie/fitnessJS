@@ -1,8 +1,8 @@
 let table = document.getElementById("todoWork");
 let modalO = document.querySelector(".bg-modal");
-let id = localStorage.length + 1;
-let counter = 1;
-let lastID = 0;
+let id = localStorage.length + 1; // used to find items and to save items that will be displayed
+let counter = 1; // used to properly list items in table
+let lastID = 0; // helping variable for finding lastID when refreshing the page
 
 if (id >= 1) {
   id = getLastID();
@@ -26,7 +26,9 @@ function addActivity(open) {
   };
   workout.caloreis = workout.cardio * 5 + workout.strenght * 7;
   workout.id = id;
+
   //Checking if input is good
+
   if (workout.cardio === "0" && workout.strenght === "0") {
     modalO.style.display = open;
   } else if (workout.cardio < "0" || workout.strenght < "0") {
@@ -46,13 +48,15 @@ function addActivity(open) {
   }
 }
 
+// Content inside the modal
+
 function activity(activity) {
   document.getElementById(activity).classList.toggle("selected");
   document.getElementById("hidden-" + activity).classList.toggle("hidenn");
   document.getElementById("min-" + activity).value = 0;
 }
 
-//display items on load
+//Display items on load
 
 function displayItems() {
   for (let i = 0; i <= getLastID(); i++) {
@@ -75,10 +79,12 @@ function displayItems() {
   }
 }
 
-//Display newly added item
+//Refreshing the page for new displayed item
 function displayNewItem() {
   location.reload();
 }
+
+//Removing the item from localStorage and refreshing
 
 function remove(ID) {
   localStorage.removeItem("workout" + ID);
@@ -86,14 +92,20 @@ function remove(ID) {
   location.reload();
 }
 
+//FINDING THE LAST INPUTED ID
+
 function getLastID() {
   Object.keys(localStorage).forEach(function(key) {
-    let test = localStorage.getItem(key);
-    lastID = test.substring(test.indexOf("id"))[4];
+    let test = JSON.parse(localStorage.getItem(key));
+    if (lastID < test.id) {
+      lastID = test.id;
+    }
   });
 
   return lastID;
 }
+
+//DELETE ALL IN TABLE
 
 function clearList() {
   if (confirm("Are you sure you want to delete all the records")) {
