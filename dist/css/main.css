@@ -62,7 +62,13 @@
       background: url("../img/logo.jpg");
       background-size: contain;
       border-radius: 50%;
-      border: solid 3px #eece1a; }
+      border: solid 3px #eece1a;
+      position: relative; }
+      .menu-branding .portrait #txt {
+        text-align: center;
+        color: black;
+        margin: 8% 0;
+        font-weight: 600; }
   .menu .nav-item {
     transform: translate3d(0, 600px, 0);
     transition: all 0.5s ease-out; }
@@ -163,12 +169,14 @@ main {
       main .icons a:hover {
         color: #eece1a;
         transition: all 0.5s ease-out; }
-  main #home-btn {
-    transform: scale(1, 1);
-    transition: all 0.5s ease-out; }
   main #home-btn:hover {
-    transform: translate(10px);
     transition: all 0.5s ease-out; }
+    main #home-btn:hover > a {
+      color: #eece1a;
+      transition: all 0.5s ease-out; }
+    main #home-btn:hover > a > .text-secondary {
+      color: #fff;
+      transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {

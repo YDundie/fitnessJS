@@ -91,6 +91,14 @@
       background-size: contain;
       border-radius: 50%;
       border: solid 3px setTextColorSecondary($primary-color);
+      position: relative;
+
+      #txt {
+        text-align: center;
+        color: black;
+        margin: 8% 0;
+        font-weight: 600;
+      }
     }
   }
   .nav-item {

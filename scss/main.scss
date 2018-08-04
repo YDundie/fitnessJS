@@ -67,13 +67,18 @@ main {
       }
     }
   }
-  #home-btn {
-    transform: scale(1, 1);
-    @include easeOut;
-  }
+
   #home-btn:hover {
-    transform: translate(10px);
     @include easeOut;
+
+    & > a {
+      color: setTextColorSecondary($primary-color);
+      @include easeOut;
+    }
+    & > a > .text-secondary {
+      color: setTextColor($primary-color);
+      @include easeOut;
+    }
   }
   &#home {
     overflow: hidden;

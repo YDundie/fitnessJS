@@ -13,7 +13,7 @@
     <title>Fitness Calculator</title>
 </head>
 
-<body id="bg-img">
+<body id="bg-img" onload="startTime()">
     <header>
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -24,7 +24,9 @@
 
         <nav class="menu">
             <div class="menu-branding">
-                <div class="portrait"></div>
+                <div class="portrait">
+                    <p id="txt"></p>
+                </div>
             </div>
             <ul class="menu-nav">
                 <li class="nav-item ">

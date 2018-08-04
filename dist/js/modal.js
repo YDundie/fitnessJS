@@ -53,7 +53,7 @@ function addActivity(open) {
 function activity(activity) {
   document.getElementById(activity).classList.toggle("selected");
   document.getElementById("hidden-" + activity).classList.toggle("hidenn");
-  document.getElementById("min-" + activity).value = 0;
+  document.getElementById("min-" + activity).value = null;
 }
 
 //Display items on load

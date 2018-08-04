@@ -12,7 +12,7 @@
     <title>Fitness Calculator</title>
 </head>
 
-<body id="bg-img">
+<body id="bg-img" onload="startTime()">
     <header>
         <div class="menu-btn">
             <div class="btn-line"></div>
@@ -23,7 +23,9 @@
 
         <nav class="menu">
             <div class="menu-branding">
-                <div class="portrait"></div>
+                <div class="portrait">
+                    <p id="txt"></p>
+                </div>
             </div>
             <ul class="menu-nav">
                 <li class="nav-item current">
@@ -68,7 +70,7 @@
                 <input type="range" min="100" max="280" value="190" class="slider" id="myHeight">
             </p>
             <p class="resoult">BMI:
-                <span id="color">---</span>
+                <span id="color">30.47</span>
             </p>
             <p>
                 <strong> BMI Categories: </strong>
