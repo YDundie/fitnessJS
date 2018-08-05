@@ -68,7 +68,8 @@
         text-align: center;
         color: black;
         margin: 8% 0;
-        font-weight: 600; }
+        font-weight: 600;
+        font-size: 120%; }
   .menu .nav-item {
     transform: translate3d(0, 600px, 0);
     transition: all 0.5s ease-out; }
@@ -373,4 +374,7 @@ button {
   .activity > ul > li {
     margin-bottom: 1rem; }
   #date {
-    width: 40%; } }
+    width: 40%; }
+  #bg-img {
+    background-attachment: fixed;
+    background-size: cover; } }
