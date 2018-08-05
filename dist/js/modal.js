@@ -30,6 +30,14 @@ function addActivity(open) {
 
   //Checking if input is good
 
+  if (workout.cardio === "") {
+    workout.cardio = "0";
+  }
+
+  if (workout.strenght === "") {
+    workout.strenght = "0";
+  }
+
   if (workout.cardio === "0" && workout.strenght === "0") {
     modalO.style.display = open;
   } else if (workout.cardio < "0" || workout.strenght < "0") {
@@ -60,7 +68,7 @@ function activity(activity) {
 //Display items on load
 
 function displayItems() {
-  document.getElementById("sumCal").textContent = sumCal;
+  document.getElementById("sumCal").textContent = sumCal % 100000;
   for (let i = 0; i <= getLastID(); i++) {
     //string to object
 
